@@ -4,10 +4,9 @@ Title: Statistical Inference via Lancaster Correlation
 Version: 0.1.0
 Author: Hajo Holzmann, Bernhard Klar
 Maintainer: Bernhard Klar <bernhard.klar@kit.edu>
-Description: Implementation of the methods described in Holzmann, Klar (2024): 
+Description: Implementation of the methods described in Holzmann, Klar (2024), 
     Lancester correlation: a new dependence measure linked to maximum correlation. 
-    arXiv:2303.17872
-Imports: arrangements, boot
+Imports: acepack, arrangements, boot, sn
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
