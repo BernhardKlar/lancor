@@ -37,9 +37,9 @@ lcor.ci(x, y = NULL, conf.level = 0.95, type = c("rank", "linear"), con = TRUE,
 %%     ~~Describe \code{method} here~~
 }
 }
-\details{
+%%\details{
 %%  ~~ If necessary, more details than the description above ~~
-}
+%%}
 \value{
 \verb{lcor.ci} returns a vector containing the left and right endpoint of the confidence interval.
 %%  ~Describe the value returned
@@ -56,13 +56,13 @@ measure linked to maximum correlation. arXiv:2303.17872
 \author{Hajo Holzmann, Bernhard Klar
 %%  ~~who you are~~
 }
-\note{
+%%\note{
 %%  ~~further notes~~
-}
+%%}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
-\seealso{\code{\link{lcor, lcor.comp, lcor.test}}
+\seealso{\code{\link{lcor}}, \code{\link{lcor.comp}}, \code{\link{lcor.test}}
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{

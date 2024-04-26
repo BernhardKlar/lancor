@@ -23,9 +23,9 @@ lcor(x, y = NULL, type = c("rank", "linear"))
 %%     ~~Describe \code{type} here~~
 }
 }
-\details{
+%%\details{
 %%  ~~ If necessary, more details than the description above ~~
-}
+%%}
 \value{
 \verb{lcor} returns the sample Lancaster correlation.
 %%  ~Describe the value returned
@@ -42,13 +42,13 @@ measure linked to maximum correlation. arXiv:2303.17872
 \author{Hajo Holzmann, Bernhard Klar
 %%  ~~who you are~~
 }
-\note{
+%%\note{
 %%  ~~further notes~~
-}
+%%}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
-\seealso{\code{\link{lcor.comp, lcor.ci, lcor.test}}
+\seealso{\code{\link{lcor.comp}}, \code{\link{lcor.ci}}, \code{\link{lcor.test}}
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{

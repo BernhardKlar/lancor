@@ -60,8 +60,8 @@ lcor.test = function(x, y = NULL, type = c("rank", "linear"), nperm = 999,
       tau = e30*e03 / sqrt( (e40-1) * (e04-1) )
       alpha1 = sqrt( (1-tau) / (1+tau) )
       alpha2 = sqrt( (1+tau) / (1-tau) )
-      pval = 1 - 2 * ( psn(ts,0,1,alpha1) - psn(0,0,1,alpha1)
-                       + psn(-ts,0,1,alpha2) - psn(0,0,1,alpha2) )
+      pval = 1 - 2 * ( sn::psn(ts,0,1,alpha1) - sn::psn(0,0,1,alpha1)
+                       + sn::psn(-ts,0,1,alpha2) - sn::psn(0,0,1,alpha2) )
       return(list(lcor = lc, pval = pval))
     }
     if (method == "permutation") {

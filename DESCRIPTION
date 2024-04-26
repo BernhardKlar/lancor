@@ -6,8 +6,11 @@ Author: Hajo Holzmann, Bernhard Klar
 Maintainer: Bernhard Klar <bernhard.klar@kit.edu>
 Description: Implementation of the methods described in Holzmann, Klar (2024), 
     Lancester correlation: a new dependence measure linked to maximum correlation. 
-Imports: acepack, arrangements, boot, sn
-License: What license is it under?
+Imports: acepack, arrangements, boot, graphics, sn, stats
+License: GPL-2
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.1
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

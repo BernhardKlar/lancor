@@ -18,9 +18,9 @@ Sigma.est(xx)
 %%     ~~Describe \code{xx} here~~
 }
 }
-\details{
+%%\details{
 %%  ~~ If necessary, more details than the description above ~~
-}
+%%}
 \value{
 \verb{Sigma.est} returns the estimated covariance matrix.
 %%  ~Describe the value returned
@@ -37,9 +37,9 @@ measure linked to maximum correlation. arXiv:2303.17872
 \author{Hajo Holzmann, Bernhard Klar
 %%  ~~who you are~~
 }
-\note{
+%%\note{
 %%  ~~further notes~~
-}
+%%}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 

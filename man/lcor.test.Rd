@@ -31,9 +31,9 @@ lcor.test(x, y = NULL, type = c("rank", "linear"), nperm = 999,
 %%     ~~Describe \code{method} here~~
 }
 }
-\details{
+%%\details{
 %%  ~~ If necessary, more details than the description above ~~
-}
+%%}
 \value{
   \item{lcor }{the value of the test statistic.}
   \item{pval }{the p-value of the test.}
@@ -51,13 +51,13 @@ measure linked to maximum correlation. arXiv:2303.17872
 \author{Hajo Holzmann, Bernhard Klar
 %%  ~~who you are~~
 }
-\note{
+%%\note{
 %%  ~~further notes~~
-}
+%%}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
-\seealso{\code{\link{lcor, lcor.comp, lcor.ci}}
+\seealso{\code{\link{lcor}}, \code{\link{lcor.comp}}, \code{\link{lcor.ci}}
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{

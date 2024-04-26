@@ -24,9 +24,9 @@ ace.test(x, y = NULL, nperm = 999)
 %%     ~~Describe \code{nperm} here~~
 }
 }
-\details{
+%%\details{to do
 %%  ~~ If necessary, more details than the description above ~~
-}
+%%}
 \value{
   \item{ace }{the value of the test statistic.}
   \item{pval }{the p-value of the test.}
@@ -44,9 +44,9 @@ measure linked to maximum correlation. arXiv:2303.17872
 \author{Hajo Holzmann, Bernhard Klar
 %%  ~~who you are~~
 }
-\note{
+%%\note{
 %%  ~~further notes~~
-}
+%%}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
