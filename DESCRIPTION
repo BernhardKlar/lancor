@@ -1,11 +1,13 @@
 Package: lancor
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Statistical Inference via Lancaster Correlation
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Hajo Holzmann, Bernhard Klar
+Maintainer: Bernhard Klar <bernhard.klar@kit.edu>
+Description: Implementation of the methods described in Holzmann, Klar (2024): 
+    Lancester correlation: a new dependence measure linked to maximum correlation. 
+    arXiv:2303.17872
+Imports: arrangements, boot
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
