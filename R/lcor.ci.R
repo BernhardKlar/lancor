@@ -42,7 +42,8 @@ lcor.ci = function(x, y = NULL, conf.level = 0.95, type = c("rank", "linear"),
     c.o = uniroot(F, c(-si,si), extendInt="upX", Sigma=Sigma, p = 1-alpha/2)$root
     l2 = max( lc - c.o / sqrt(n), 0)
     u2 = min( lc - c.u / sqrt(n), 1)
-    if (con==TRUE) return(c(l2,u1)) else return(c(l1,u1)) #by construction: l2<l1, u2<u1
+    if (con==TRUE) return(setNames(c(l2, u1), c("lower", "upper"))) else
+      return(setNames(c(l1, u1), c("lower", "upper"))) #by construction: l2<l1, u2<u1
   }
   #
   if (type == "linear") {
@@ -83,7 +84,8 @@ lcor.ci = function(x, y = NULL, conf.level = 0.95, type = c("rank", "linear"),
       c.o = uniroot(F, c(-si,si), extendInt="upX", Sigma=Sigma, p = 1-alpha/2)$root
       l2 = max( lc - c.o / sqrt(n), 0)
       u2 = min( lc - c.u / sqrt(n), 1)
-      if (con==TRUE) return(c(l2,u1)) else return(c(l1,u1)) #by construction: l2<l1, u2<u1
+      if (con==TRUE) return(setNames(c(l2, u1), c("lower", "upper"))) else
+        return(setNames(c(l1, u1), c("lower", "upper"))) #by construction: l2<l1, u2<u1
     }
     #
     if (method == "pretest") { #asymptotic theory with pretest
@@ -113,7 +115,7 @@ lcor.ci = function(x, y = NULL, conf.level = 0.95, type = c("rank", "linear"),
         c.o = uniroot(F, c(-si,si), extendInt="upX", Sigma=Sigma, p = 1-alpha/2)$root
         l = max( lc - c.o / sqrt(n), 0)
         u = min( lc - c.u / sqrt(n), 1)
-        return( c(l,u) )
+        return( setNames(c(l, u), c("lower", "upper")) )
       }
       #if tests decides for abs(rho1) != abs(rho2)
       if (abs(rho1) >= abs(rho2)) {
@@ -126,7 +128,7 @@ lcor.ci = function(x, y = NULL, conf.level = 0.95, type = c("rank", "linear"),
       z = qnorm(1 - alpha/2)
       l = max( rho - z * se / sqrt(n), 0)
       u = min( rho + z * se / sqrt(n), 1)
-      return( c(l,u) )
+      return( setNames(c(l, u), c("lower", "upper")) )
     }
   }
 }

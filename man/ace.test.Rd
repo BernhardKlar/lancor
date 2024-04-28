@@ -28,6 +28,7 @@ ace.test(x, y = NULL, nperm = 999)
 %%  ~~ If necessary, more details than the description above ~~
 %%}
 \value{
+A list containing the following components:
   \item{ace }{the value of the test statistic.}
   \item{pval }{the p-value of the test.}
 %%  ~Describe the value returned

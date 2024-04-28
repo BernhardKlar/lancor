@@ -41,7 +41,7 @@ lcor.ci(x, y = NULL, conf.level = 0.95, type = c("rank", "linear"), con = TRUE,
 %%  ~~ If necessary, more details than the description above ~~
 %%}
 \value{
-\verb{lcor.ci} returns a vector containing the left and right endpoint of the confidence interval.
+\verb{lcor.ci} returns a vector containing the lower and upper limits of the confidence interval.
 %%  ~Describe the value returned
 %%  If it is a LIST, use
 %%  \item{comp1 }{Description of 'comp1'}
