@@ -25,7 +25,9 @@ lcor.comp = function(x, y = NULL, type = c("rank", "linear"), plot = FALSE) {
   }
   #
   if (plot==TRUE) {
-    par(mfrow=c(1,2), mar=c(4,4,1,1))
+    oldpar = par(no.readonly = TRUE)
+    on.exit(par(oldpar))
+    par(mfrow=c(1,2))
     plot(y ~ x, pch=16, xlab="x.standardized", ylab="y.standardized")
     plot(y^2 ~ I(x^2), cex=0.7, pch=16, xlab="square of x.standardized",
          ylab="square of y.standardized")
