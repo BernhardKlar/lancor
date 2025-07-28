@@ -1,3 +1,29 @@
+#' Covariance matrix of components of Lancaster correlation coefficient
+#' 
+#' @description 
+#' Estimate of covariance matrix of the two components of Lancaster correlation. Lancaster correlation is a bivariate measures of dependence.
+#'
+#' @param xx a matrix or data frame with two columns.
+#' 
+#' @return the estimated covariance matrix.
+#'
+#' @author Hajo Holzmann, Bernhard Klar
+#' 
+#' @references 
+#' Holzmann, Klar (2024). "Lancester correlation - a new dependence measure linked to maximum correlation". \url{https://arxiv.org/abs/2303.17872}
+#' 
+#' @seealso \code{\link{lcor.ci}}
+#' 
+#' @examples 
+#' Sigma <- matrix(c(1,0.1,0.1,1), ncol=2)
+#' R <- chol(Sigma)
+#' n <- 1000
+#' x <- matrix(rnorm(n*2), n)
+#' nu <- 8
+#' y <- x / sqrt(rchisq(n, nu)/nu) #multivariate t
+#' Sigma.est(y)
+#'
+#' @export 
 Sigma.est = function(xx) {
   x = xx[,1]
   n = length(x)

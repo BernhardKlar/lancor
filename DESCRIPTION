@@ -1,7 +1,7 @@
 Package: lancor
 Type: Package
 Title: Statistical Inference via Lancaster Correlation
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: 
   c(person(given = "Bernhard",
            family = "Klar",
@@ -23,7 +23,7 @@ Imports: acepack, arrangements, boot, graphics, sn, stats
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3

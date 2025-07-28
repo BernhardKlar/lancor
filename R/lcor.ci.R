@@ -1,3 +1,36 @@
+#' Confidence intervals for the Lancaster correlation coefficient
+#' 
+#' @description
+#' Computes confidence intervals for the Lancaster correlation coefficient. Lancaster correlation is a bivariate measures of dependence.
+#' 
+#' @param x a numeric vector, or a matrix or data frame with two columns.
+#' @param y NULL (default) or a vector with same length as x.
+#' @param conf.level confidence level of the interval.
+#' @param type a character string indicating which lancaster correlation is to be computed. One of "rank" (default), or "linear": can be abbreviated.
+#' @param con logical; if TRUE (default), conservative asymptotic confidence intervals are computed.
+#' @param R number of bootstrap replications. 
+#' @param method a character string indicating how the asymptotic covariance matrix is computed if type ="linear". One of "plugin" (default), "boot" or "symmetric": can be abbreviated.
+#' 
+#' @return a vector containing the lower and upper limits of the confidence interval.
+#' 
+#'
+#' @author Hajo Holzmann, Bernhard Klar
+#' 
+#' 
+#' @references
+#' Holzmann, Klar (2024). "Lancester correlation - a new dependence measure linked to maximum correlation". \url{https://arxiv.org/abs/2303.17872}
+#' 
+#' @seealso \code{\link{lcor}, \link{lcor.comp}, \link{lcor.test}}
+#' 
+#' @examples
+#' n <- 1000
+#' x <- matrix(rnorm(n*2), n)
+#' nu <- 2
+#' y <- x / sqrt(rchisq(n, nu)/nu) # multivariate t
+#' lcor(y, type = "rank")
+#' lcor.ci(y, type = "rank")
+#' 
+#' @export 
 lcor.ci = function(x, y = NULL, conf.level = 0.95, type = c("rank", "linear"),
                    con = TRUE, R = 1000, method = c("plugin", "boot", "pretest")) {
   if (is.data.frame(x)) x = as.matrix(x)
