@@ -35,6 +35,20 @@ a vector containing the lower and upper limits of the confidence interval.
 \description{
 Computes confidence intervals for the Lancaster correlation coefficient. Lancaster correlation is a bivariate measures of dependence.
 }
+\details{
+Computes asymptotic and bootstrap-based confidence intervals for the (linear) Lancaster correlation coefficient \eqn{\rho_L} (\eqn{\rho_{L,1}}). For more details see \code{\link{lcor}}.
+
+Asymptotic confidence intervals are derived under two cases (Analogous for \eqn{\rho_{L}}, see Holzmann, Klar (2024)):
+
+\strong{Case 1:} If \eqn{|\rho_{L1}|\neq|\rho_{L2}|}, the \eqn{1-\alpha} asymptotic interval is
+\deqn{ \left[ \max\{\hat\rho_{L,1} - z_{1-\alpha/2}\,s/\sqrt{n}, 0\},\ \min\{\hat\rho_{L,1} + z_{1-\alpha/2}\,s/\sqrt{n}, 1\} \right], }
+where \eqn{z_{1-\alpha/2}} is the standard normal quantile and \eqn{s} is an estimtor of the \eqn{(1,1)-}entry of the asymptotic covariance matrix \eqn{\Sigma^*}.
+
+\strong{Case 2:} If \eqn{|\rho_{L1}|=|\rho_{L2}|=a>0}, let \eqn{\tau} denote the correlation between the two components and let \eqn{q_{1-\alpha/2}} be the \eqn{1-\alpha/2} quantile of the asymptotic distribution of \eqn{\sqrt{n}(\hat\rho_{L,1} - a)}. A conservative asymptotic interval is
+\deqn{ \left[ \max\{\hat\rho_{L,1} - q_{1-\alpha/2}/\sqrt{n}, 0\},\ \min\{\hat\rho_{L,1} + z_{1-\alpha/2}\,s/\sqrt{n}, 1\} \right]. }
+
+Additionally, bootstrap-based intervals can be obtained by resampling and estimating the covariance matrix of the rank or linear correlation components.
+}
 \examples{
 n <- 1000
 x <- matrix(rnorm(n*2), n)

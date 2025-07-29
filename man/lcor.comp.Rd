@@ -21,6 +21,9 @@ a vector containing the two components rho1 and rho2 and the sample Lancaster co
 \description{
 Computes the Lancaster correlation coefficient and its components.
 }
+\details{
+For more details see \code{\link{lcor}}.
+}
 \examples{
 Sigma <- matrix(c(1,0.1,0.1,1), ncol=2)
 R <- chol(Sigma)

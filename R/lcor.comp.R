@@ -2,6 +2,9 @@
 #' 
 #' @description 
 #' Computes the Lancaster correlation coefficient and its components.
+#' 
+#' @details 
+#' For more details see \code{\link{lcor}}.
 #'
 #' @param x a numeric vector, or a matrix or data frame with two columns.
 #' @param y NULL (default) or a vector with same length as x. 
