@@ -34,7 +34,7 @@ ace.test(y)
 Holzmann, Klar (2024). "Lancester correlation - a new dependence measure linked to maximum correlation". \doi{https://doi.org/10.1111/sjos.12733}
 }
 \seealso{
-\code{\link{lcor.test}} for the Lancester correlation test.
+\code{\link{lcor.test}}
 }
 \author{
 Hajo Holzmann, Bernhard Klar

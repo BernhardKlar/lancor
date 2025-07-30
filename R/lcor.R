@@ -14,11 +14,11 @@
 #' Two estimation methods are supported:
 #'
 #' \itemize{
-#'   \item \strong{Linear estimator for \eqn{\rho_{L,1}}} (\code{type = "linear"}): Consider \eqn{\rho_{L1} = \operatorname{Cor}_{\text{Pearson}}(X,Y)} and \eqn{\rho_{L2} = \operatorname{Cor}_{\text{Pearson}}((X^*)^2,(Y^*)^2)}.
+#'   \item \strong{Linear estimator for \eqn{\bold{\rho_{L,1}}}} (\code{type = "linear"}): Consider \eqn{\rho_{L1} = \operatorname{Cor}_{\text{Pearson}}(X,Y)} and \eqn{\rho_{L2} = \operatorname{Cor}_{\text{Pearson}}((X^*)^2,(Y^*)^2)}.
 #'   Let \eqn{\hat\rho_{L1}} be the sample Pearson correlation and \eqn{\hat\rho_{L2}} the empirical correlation of the squares of the empirically standardized observations, and set
 #'   \eqn{\hat\rho_{L,1} = \max\{\,|\hat\rho_{L1}|,\;|\hat\rho_{L2}|\,\}}.
 #'
-#'   \item \strong{Rank-based estimator for \eqn{\rho_{L}}} (\code{type = "rank"}): Consider \eqn{\rho_{R1} = \operatorname{Cor}_{\text{Pearson}}(X,Y)} and \eqn{\rho_{R2} = \operatorname{Cor}_{\text{Pearson}}((X^*)^2,(Y^*)^2)}.
+#'   \item \strong{Rank-based estimator for \eqn{\bold{\rho_{L}}}} (\code{type = "rank"}): Consider \eqn{\rho_{R1} = \operatorname{Cor}_{\text{Pearson}}(X,Y)} and \eqn{\rho_{R2} = \operatorname{Cor}_{\text{Pearson}}((X^*)^2,(Y^*)^2)}.
 #'   Let \eqn{Q_i} and \eqn{R_i} be the ranks of \eqn{X_i} and \eqn{Y_i}, within \eqn{X_1,...,X_n} or \eqn{Y_1,...,Y_n} respectively. Define
 #'   \deqn{\hat\rho_{R1} = \frac{1}{n\,s_a^2}\sum_{i=1}^n a(Q_i)\,a(R_i),}
 #'   \deqn{\hat\rho_{R2} = \frac{1}{n\,s_b^2}\sum_{i=1}^n \bigl(b(Q_i)-\bar b\bigr)\,\bigl(b(R_i)-\bar b\bigr),}
