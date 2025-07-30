@@ -31,6 +31,9 @@ A list containing the following components:
 \description{
 Lancaster correlation test of bivariate independence. Lancaster correlation is a bivariate measures of dependence.
 }
+\details{
+For more details on the testing procedure see \eqn{Remark \, 2} in Holzmann, Klar (2024).
+}
 \examples{
 n <- 200
 x <- matrix(rnorm(n*2), n)
@@ -41,7 +44,7 @@ lcor.test(y, type = "rank")
 
 }
 \references{
-Holzmann, Klar (2024). "Lancester correlation - a new dependence measure linked to maximum correlation". \url{https://arxiv.org/abs/2303.17872}
+Holzmann, Klar (2024). "Lancester correlation - a new dependence measure linked to maximum correlation". \doi{https://doi.org/10.1111/sjos.12733}
 }
 \seealso{
 \code{\link{lcor}, \link{lcor.comp}, \link{lcor.ci}}

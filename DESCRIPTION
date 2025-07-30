@@ -12,7 +12,7 @@ Authors@R:
            family = "Holzmann",
            role = "aut",
            email = "holzmann@mathematik.uni-marburg.de"))
-Description: Implementation of the methods described in Holzmann, Klar (2024) <arXiv:2303.17872>.
+Description: Implementation of the methods described in Holzmann, Klar (2024) <doi: 10.1111/sjos.12733>.
     Lancaster correlation is a correlation coefficient which equals the 
     absolute value of the Pearson correlation for the bivariate normal distribution,
     and is equal to or slightly less than the maximum correlation coefficient 

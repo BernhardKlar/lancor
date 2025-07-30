@@ -2,7 +2,11 @@
 #' 
 #' @description
 #' Lancaster correlation test of bivariate independence. Lancaster correlation is a bivariate measures of dependence.
-#'
+#' 
+#' @details
+#' For more details on the testing procedure see \eqn{Remark \, 2} in Holzmann, Klar (2024).
+#' 
+#' 
 #' @param x a numeric vector, or a matrix or data frame with two columns.
 #' @param y NULL (default) or a vector with same length as x
 #' @param type a character string indicating which lancaster correlation is to be computed. One of "rank" (default), or "linear": can be abbreviated.
@@ -12,11 +16,11 @@
 #' @return A list containing the following components:
 #' \item{lcor}{the value of the test statistic}
 #' \item{pval}{the p-value of the test}
-#'
+#' 
 #' @author Hajo Holzmann, Bernhard Klar
 #' 
 #' @references
-#' Holzmann, Klar (2024). "Lancester correlation - a new dependence measure linked to maximum correlation". \url{https://arxiv.org/abs/2303.17872}
+#' Holzmann, Klar (2024). "Lancester correlation - a new dependence measure linked to maximum correlation". \doi{https://doi.org/10.1111/sjos.12733} 
 #' 
 #' @seealso \code{\link{lcor}, \link{lcor.comp}, \link{lcor.ci}}
 #' 

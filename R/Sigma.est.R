@@ -3,6 +3,9 @@
 #' @description 
 #' Estimate of covariance matrix of the two components of Lancaster correlation. Lancaster correlation is a bivariate measures of dependence.
 #'
+#' @details 
+#' For more details see the Appendix in Holzmann, Klar (2024).
+#' 
 #' @param xx a matrix or data frame with two columns.
 #' 
 #' @return the estimated covariance matrix.
@@ -10,7 +13,7 @@
 #' @author Hajo Holzmann, Bernhard Klar
 #' 
 #' @references 
-#' Holzmann, Klar (2024). "Lancester correlation - a new dependence measure linked to maximum correlation". \url{https://arxiv.org/abs/2303.17872}
+#' Holzmann, Klar (2024). "Lancester correlation - a new dependence measure linked to maximum correlation". \doi{https://doi.org/10.1111/sjos.12733}
 #' 
 #' @seealso \code{\link{lcor.ci}}
 #' 
