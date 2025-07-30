@@ -1,7 +1,7 @@
-### lancor: Statistical Inference via Lancaster Correlation
+## lancor: Statistical Inference via Lancaster Correlation
 
-[![Paper](https://onlinelibrary.wiley.com/doi/full/10.1111/sjos.12733)
-[![CRAN](https://cran.r-project.org/web/packages/lancor/index.html)
+[![CRAN version](https://www.r-pkg.org/badges/version/lancor)](https://cran.r-project.org/package=lancor)
+[![downloads](https://cranlogs.r-pkg.org/badges/grand-total/lancor)](https://cran.r-project.org/package=lancor)
 
 
 ### Synopsis 
@@ -12,14 +12,7 @@ and is equal to or slightly less than the maximum correlation coefficient for a 
 tests based on these statistics.
 
 ### Examples 
-
-The Lancaster correlation coefficient and the linear Lancaster correlation coefficient are defined as follows:
-
- Let $F_X$ and $F_Y$ be the distribution functions of $X$ and $Y$, and define $X^* = \Phi^{-1}(F_X(X)), \quad Y^* = \Phi^{-1}(F_Y(Y))$, where $\Phi^{-1}$ is the standard normal quantile function. Then \
- $\rho_L(X,Y) = \max\{|\operatorname{Cor}_{\text{Pearson}}(X^*,Y^*)|,\; | \operatorname{Cor}_{\text{Pearson}}((X^*)^2,(Y^*)^2)|\}$  and $\rho_{L,1}(X,Y) = \max\{|\operatorname{Cor}_{\text{Pearson}}(X,Y)|,\; | \operatorname{Cor}_{\text{Pearson}}((X^*)^2,(Y^*)^2)|\}$, \
- the Lancaster correlation coefficient and the linear Lancaster correlation coefficient, respectively.
-
- The two correlation coefficients are estimated via the `lcor` function:
+ The Lancaster correlation coefficient and the linear Lancaster correlation coefficient are estimated via the `lcor` function:
 
  ```R
  n <- 1000 
