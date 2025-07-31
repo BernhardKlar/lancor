@@ -11,7 +11,11 @@ Authors@R:
     person(given = "Hajo",
            family = "Holzmann",
            role = "aut",
-           email = "holzmann@mathematik.uni-marburg.de"))
+           email = "holzmann@mathematik.uni-marburg.de"),
+    person(given = "Lucas",
+           family = "Iglesias",
+           role = "ctb",
+           email = "lucas.iglesias@student.kit.edu"))
 Description: Implementation of the methods described in Holzmann, Klar (2024) <doi: 10.1111/sjos.12733>.
     Lancaster correlation is a correlation coefficient which equals the 
     absolute value of the Pearson correlation for the bivariate normal distribution,
@@ -19,7 +23,7 @@ Description: Implementation of the methods described in Holzmann, Klar (2024) <d
     for a variety of bivariate distributions. Rank and moment-based estimators and 
     corresponding confidence intervals are implemented, as well as independence 
     tests based on these statistics. 
-Imports: acepack, arrangements, boot, graphics, sn, stats
+Imports: arrangements, boot, graphics, sn, stats
 License: GPL-2
 Encoding: UTF-8
 LazyData: true

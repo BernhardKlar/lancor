@@ -47,7 +47,7 @@ lcor.test(y, type = "rank")
 Holzmann, Klar (2024). "Lancester correlation - a new dependence measure linked to maximum correlation". \doi{https://doi.org/10.1111/sjos.12733}
 }
 \seealso{
-\code{\link{lcor}, \link{lcor.comp}, \link{lcor.ci}}
+\code{\link{lcor}, \link{lcor.comp}, \link{lcor.ci}} and for for performing an ACE permutation test of independence see \code{acepack} (\url{https://cran.r-project.org/package=acepack}).
 }
 \author{
 Hajo Holzmann, Bernhard Klar
