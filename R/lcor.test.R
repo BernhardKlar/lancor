@@ -1,3 +1,38 @@
+#' Lancaster correlation test
+#' 
+#' @description
+#' Lancaster correlation test of bivariate independence. Lancaster correlation is a bivariate measures of dependence.
+#' 
+#' @details
+#' For more details on the testing procedure see \eqn{Remark \, 2} in Holzmann, Klar (2024).
+#' 
+#' 
+#' @param x a numeric vector, or a matrix or data frame with two columns.
+#' @param y NULL (default) or a vector with same length as x
+#' @param type a character string indicating which lancaster correlation is to be computed. One of "rank" (default), or "linear": can be abbreviated.
+#' @param nperm number of permutations.
+#' @param method a character string indicating how the p-value is computed if type ="linear". One of "permutation" (default), "asymptotic" or "symmetric": can be abbreviated.
+#' 
+#' @return A list containing the following components:
+#' \item{lcor}{the value of the test statistic}
+#' \item{pval}{the p-value of the test}
+#' 
+#' @author Hajo Holzmann, Bernhard Klar
+#' 
+#' @references
+#' Holzmann, Klar (2024). "Lancester correlation - a new dependence measure linked to maximum correlation". \doi{https://doi.org/10.1111/sjos.12733} 
+#' 
+#' @seealso \code{\link{lcor}, \link{lcor.comp}, \link{lcor.ci}} and for performing an ACE permutation test of independence see \code{acepack} (\url{https://cran.r-project.org/package=acepack}). 
+#' 
+#' @examples 
+#' n <- 200
+#' x <- matrix(rnorm(n*2), n)
+#' nu <- 2
+#' y <- x / sqrt(rchisq(n, nu)/nu)
+#' cor.test(y[,1], y[,2], method = "spearman")
+#' lcor.test(y, type = "rank")
+#'
+#' @export 
 lcor.test = function(x, y = NULL, type = c("rank", "linear"), nperm = 999,
                      method = c("permutation", "asymptotic", "symmetric")) {
   if (is.data.frame(x)) x = as.matrix(x)

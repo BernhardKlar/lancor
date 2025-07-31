@@ -1,3 +1,50 @@
+#' Confidence intervals for the Lancaster correlation coefficient
+#' 
+#' @description
+#' Computes confidence intervals for the Lancaster correlation coefficient. Lancaster correlation is a bivariate measures of dependence.
+#' 
+#' @details
+#' Computes asymptotic and bootstrap-based confidence intervals for the (linear) Lancaster correlation coefficient \eqn{\rho_L} (\eqn{\rho_{L,1}}). For more details see \code{\link{lcor}}.
+#'
+#' Asymptotic confidence intervals are derived under two cases (analogously for \eqn{\rho_{L}}; see Holzmann and Klar (2024)):
+#'
+#' \strong{Case 1:} If \eqn{|\rho_{L1}|\neq|\rho_{L2}|}, the \eqn{1-\alpha} asymptotic interval is
+#' \deqn{ \left[ \max\{\hat\rho_{L,1} - z_{1-\alpha/2}\,s/\sqrt{n}, 0\},\ \min\{\hat\rho_{L,1} + z_{1-\alpha/2}\,s/\sqrt{n}, 1\} \right], }
+#' where \eqn{z_{1-\alpha/2}} is the standard normal quantile and \eqn{s} is an estimator of the corresponding standard deviation.
+#'
+#' \strong{Case 2:} If \eqn{|\rho_{L1}|=|\rho_{L2}|=a>0}, let \eqn{\tau} denote the correlation between the two components and let \eqn{q_{1-\alpha/2}} be the \eqn{1-\alpha/2} quantile of the asymptotic distribution of \eqn{\sqrt{n}(\hat\rho_{L,1} - a)}. A conservative asymptotic interval is
+#' \deqn{ \left[ \max\{\hat\rho_{L,1} - q_{1-\alpha/2}/\sqrt{n}, 0\},\ \min\{\hat\rho_{L,1} + z_{1-\alpha/2}\,s/\sqrt{n}, 1\} \right]. }
+#'
+#' Additionally, bootstrap-based intervals can be obtained by resampling and estimating the covariance matrix of the rank or linear correlation components.
+#' 
+#' @param x a numeric vector, or a matrix or data frame with two columns.
+#' @param y NULL (default) or a vector with same length as x.
+#' @param conf.level confidence level of the interval.
+#' @param type a character string indicating which lancaster correlation is to be computed. One of "rank" (default), or "linear": can be abbreviated.
+#' @param con logical; if TRUE (default), conservative asymptotic confidence intervals are computed.
+#' @param R number of bootstrap replications. 
+#' @param method a character string indicating how the asymptotic covariance matrix is computed if type ="linear". One of "plugin" (default), "boot" or "symmetric": can be abbreviated.
+#' 
+#' @return a vector containing the lower and upper limits of the confidence interval.
+#' 
+#'
+#' @author Hajo Holzmann, Bernhard Klar
+#' 
+#' 
+#' @references
+#' Holzmann, Klar (2024). "Lancester correlation - a new dependence measure linked to maximum correlation". \doi{https://doi.org/10.1111/sjos.12733}
+#' 
+#' @seealso \code{\link{lcor}, \link{lcor.comp}, \link{lcor.test}}
+#' 
+#' @examples
+#' n <- 1000
+#' x <- matrix(rnorm(n*2), n)
+#' nu <- 2
+#' y <- x / sqrt(rchisq(n, nu)/nu) # multivariate t
+#' lcor(y, type = "rank")
+#' lcor.ci(y, type = "rank")
+#' 
+#' @export 
 lcor.ci = function(x, y = NULL, conf.level = 0.95, type = c("rank", "linear"),
                    con = TRUE, R = 1000, method = c("plugin", "boot", "pretest")) {
   if (is.data.frame(x)) x = as.matrix(x)
