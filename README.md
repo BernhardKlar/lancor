@@ -6,7 +6,7 @@
 
 ### Synopsis 
 
-The [lancor package](https://cran.r-project.org/packages=lancor) implements the methods described in [Holzmann, Klar (2024)](https://onlinelibrary.wiley.com/doi/full/10.1111/sjos.12733).
+The [lancor package](https://cran.r-project.org/package=lancor) implements the methods described in [Holzmann, Klar (2024)](https://onlinelibrary.wiley.com/doi/full/10.1111/sjos.12733).
 Lancaster correlation is a correlation coefficient which equals the absolute value of the Pearson correlation for the bivariate normal distribution,
 and is equal to or slightly less than the maximum correlation coefficient for a variety of bivariate distributions. Rank and moment-based estimators and corresponding confidence intervals are implemented, as well as independence 
 tests based on these statistics.
